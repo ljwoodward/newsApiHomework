@@ -20,17 +20,11 @@ const makeRequest = function (responseUrl, callback) {
 
 const render = function(articles) {
   articles.forEach(function(article) {
-    const table = document.querySelector('#ai-articles');
-    const headerRow = document.createElement('tr');
-    const header = document.createElement('td');
-    header.innerHTML = `<h2>${article.title}</h2>`;
-    headerRow.appendChild(header);
-    const descriptionRow = document.createElement('tr');
-    const description = document.createElement('td');
-    description.innerText = article.description;
-    descriptionRow.appendChild(description);
-    table.appendChild(headerRow);
-    table.appendChild(descriptionRow);
+    const section = document.querySelector('#articles');
+    const articleBlock = document.createElement('article');
+    articleBlock.innerHTML = `<h2> ${article.title} </h2> <img src="${article.urlToImage}" width="240px"> <p> ${article.description} <br> <a href="${article.url}" target="_blank"> Full Article </a>`;
+
+    section.appendChild(articleBlock);
 
   })
 }

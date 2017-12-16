@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "pug": "^2.0.0-rc.4",
+    "rapidapi-connect": "0.0.6"
   }
 }
