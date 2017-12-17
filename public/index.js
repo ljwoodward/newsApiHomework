@@ -52,7 +52,7 @@ const render = function(articles) {
   section.innerHTML = "";
   articles.forEach(function(article) {
     const articleBlock = document.createElement('article');
-    articleBlock.innerHTML = `<h2> ${article.title} </h2> <img src="${article.urlToImage}" width="240px"> <p> ${article.description} <br> <a href="${article.url}" target="_blank"> Full Article </a>`;
+    articleBlock.innerHTML = `<h2> ${article.title} </h2> <h5> ${article.author} </h5> <h6> ${article.source.name}</h6> <img src="${article.urlToImage}" width="240px"> <p> ${article.description} <br> <a href="${article.url}" target="_blank"> Full Article </a>`;
 
     section.appendChild(articleBlock);
 
